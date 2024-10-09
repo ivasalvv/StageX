@@ -1,0 +1,715 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StageX</title>
+  <meta name="description" content="Профессиональный файловый сервис" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+    integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/media.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header--container">
+      <nav class="header--container__nav">
+        <ul class="list header--container__nav__list">
+          <li class="header--container__nav__list__li">
+            <a href="#bonus" class="link header--container__nav__list__li__link">
+              Бонус
+            </a>
+          </li>
+          <li class="header--container__nav__list__li">
+            <a href="#how" class="link header--container__nav__list__li__link">
+              Как это работает
+            </a>
+          </li>
+          <li class="header--container__nav__list__li">
+            <a href="#prices" class="link header--container__nav__list__li__link">
+              Прайс-лист
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header--container__logo">
+        <a href="/" class="link header--container__logo__link">
+          <img class="header--container__logo__link__img" src="./images/logos/white_logo.png" alt="" />
+        </a>
+      </div>
+      <nav class="header--container__nav">
+        <ul class="list header--container__nav__list-reg">
+          <li class="header--container__nav__list-reg__li">
+            <a href="/" class="link header--container__nav__list-reg__li__link">
+              Войти
+            </a>
+          </li>
+          <li class="header--container__nav__list-reg__li">
+            <a href="/" class="link header--container__nav__list-reg__li__link">
+              Регистрация
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header--container__lang">
+        <p class="header--container__lang__name">
+          RU
+          <svg class="icon header--container__lang__change">
+            <use href="./images/icons.svg#lang_arrow"></use>
+          </svg>
+        </p>
+      </div>
+      <button class="header--container-burger js-open-menu" id="burger" aria-expanded="false"
+        aria-controls="mobile-menu">
+        <span class="header--container-burger__span"></span>
+        <span class="header--container-burger__span"></span>
+        <span class="header--container-burger__span"></span>
+      </button>
+    </div>
+    </div>
+
+  </header>
+  <!-- Hero section -->
+  <main>
+    <section class="hero">
+      <div class="container hero--container">
+        <div class="hero--container__wrapper">
+          <h1 class="title hero--container__title">
+            <span class="hero--container__title__span">Профессиональный</span>
+            файловый сервис
+          </h1>
+          <p class="hero--container__par">
+            С более чем 15-летним опытом, мы создаем индивидуальные файлы для
+            чип-тюнинга, проходящие динамические и дорожные испытания.
+            Быстрые, простые и гарантированные результаты. Присоединяйтесь к
+            нам сегодня!
+          </p>
+          <a href="/" class="link button hero--container__link">
+            Зарегистрироваться
+          </a>
+        </div>
+      </div>
+    </section>
+    <section id="bonus" class="bonus">
+      <div class="container bonus--container">
+        <p class="bonus--container__par">
+          Регистрируйся сегодня и
+          <span class="bonus--container__par__span">получи бонус</span>
+        </p>
+        <p class="bonus--container__sum">250&euro;</p>
+      </div>
+    </section>
+    <section id="how" class="hiw">
+      <div class="container hiw--container">
+        <div class="hiw--container__wrapper">
+          <p class="hiw--container__par4">Всего 4 этапа</p>
+          <h2 class="title hiw--container__title">Как это работает?</h2>
+          <div class="hiw--container__stages">
+            <ul class="list hiw--container__stages__list">
+              <li class="hiw--container__stages__list__li">
+                <button class="hiw--container__stages__button" onclick="openTab(event, 'Tab1')">
+                  <svg class="icon hiw--container__stages__button__icon active">
+                    <use href="./images/icons.svg#blcircle"></use>
+                  </svg>
+                  Создай бесплатный аккаунт
+                </button>
+                <p id="Tab1" class="hiw--container__stages__par active">
+                  Начните с бесплатной регистрации. Это займет всего пару минут.
+                  Кредитная карта или
+                  <span class="hiw--container__stages__par__span">предоплата не требуются.</span>
+                </p>
+              </li>
+              <li class="hiw--container__stages__list__li">
+                <button class="hiw--container__stages__button" onclick="openTab(event, 'Tab2')">
+                  <svg class="icon hiw--container__stages__button__icon">
+                    <use href="./images/icons.svg#grcircle"></use>
+                  </svg>
+                  Купить кредиты
+                </button>
+                <p id="Tab2" class="hiw--container__stages__par dn">
+                  Приобретите кредиты, чтобы начать размещать запросы файлов ECU.
+                  Все транзакции безопасно обрабатываются PayPal. Используйте нашу
+                  электронную систему выставления счетов. Отслеживайте все свои
+                  предыдущие покупки в журнале истории.
+                </p>
+              </li>
+              <li class="hiw--container__stages__list__li">
+                <button class="hiw--container__stages__button" onclick="openTab(event, 'Tab3')">
+                  <svg class="icon hiw--container__stages__button__icon">
+                    <use href="./images/icons.svg#grcircle"></use>
+                  </svg>
+                  Загрузите оригинальный файл
+                </button>
+                <p id="Tab3" class="hiw--container__stages__par dn">
+                  Загрузите и сохраните исходный файл ECU. Общайтесь с назначенным
+                  билетным менеджером. Отслеживайте ход каждого билета. Просмотрите
+                  все текущие и предыдущие билеты.
+                </p>
+              </li>
+              <li class="hiw--container__stages__list__li">
+                <button class="hiw--container__stages__button" onclick="openTab(event, 'Tab4')">
+                  <svg class="icon hiw--container__stages__button__icon">
+                    <use href="./images/icons.svg#grcircle"></use>
+                  </svg>
+                  Загрузите файл настройки
+                </button>
+                <p id="Tab4" class="hiw--container__stages__par dn">
+                  Получите уведомление прямо на свою электронную почту, как только
+                  ваш файл настройки будет готов. Просмотрите детали билета.
+                  Загрузите файл. Вернитесь в любой момент — файл будет надежно
+                  храниться неограниченное время.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="hiw--container__images">
+          <img id="Tab1" src="./images/hiw/free_ac.png" alt="" class="hiw--container__images__img active">
+          <img id="Tab2" src="./images/hiw/credits.png" alt="" class="hiw--container__images__img dn">
+          <img id="Tab3" src="./images/hiw/orig_file.png" alt="" class="hiw--container__images__img dn">
+          <img id="Tab4" src="./images/hiw/set_file.png" alt="" class="hiw--container__images__img dn">
+        </div>
+      </div>
+    </section>
+    <section id="prices" class="prices">
+      <div class="container prices--container">
+        <h2 class="title prices--container__title">Цены на файлы</h2>
+        <div class="prices--container__flex">
+          <div class="prices--container__info">
+            <div class="prices--container__wrapper">
+              <ul class="list prices--container__wrapper__list">
+                <li class="prices--container__wrapper__list__li">
+                  <p class="prices--container__wrapper__list__li__par_name">
+                    Engine
+                  </p>
+                  <p class="prices--container__wrapper__list__li__par_descr">
+                    Stage 1/2
+                  </p>
+                  <p class="prices--container__wrapper__list__li__par_price">
+                    50/70€
+                  </p>
+                </li>
+                <li class="prices--container__wrapper__list__li">
+                  <p class="prices--container__wrapper__list__li__par_name">
+                    Original
+                  </p>
+                  <p class="prices--container__wrapper__list__li__par_descr">
+                    File request
+                  </p>
+                  <p class="prices--container__wrapper__list__li__par_price">
+                    50€
+                  </p>
+                </li>
+                <li class="prices--container__wrapper__list__li">
+                  <p class="prices--container__wrapper__list__li__par_name">
+                    GearBox VAG & ZF
+                  </p>
+                  <p class="prices--container__wrapper__list__li__par_descr">
+                    stage 1/2
+                  </p>
+                  <p class="prices--container__wrapper__list__li__par_price">
+                    50/70€
+                  </p>
+                </li>
+                <li class="prices--container__wrapper__list__li">
+                  <p class="prices--container__wrapper__list__li__par_name">
+                    Engine eco tuning
+                  </p>
+                  <p class="prices--container__wrapper__list__li__par_descr">
+                    (Fuel economy)
+                  </p>
+                  <p class="prices--container__wrapper__list__li__par_price">
+                    70€
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div class="prices--container__bonus">
+              <p class="prices--container__bonus__par__title">Бонус</p>
+              <p class="prices--container__bonus__par">
+                Если вы заплатите
+                <span class="prices--container__bonus__par__span">500€</span>,
+                вы получите
+                <span class="prices--container__bonus__par__span">550€</span>
+              </p>
+              <p class="prices--container__bonus__par">
+                Если вы заплатите
+                <span class="prices--container__bonus__par__span">1 000€</span>, вы получите
+                <span class="prices--container__bonus__par__span">1 250€</span>
+              </p>
+            </div>
+            <div class="prices--container__descr">
+              <p class="prices--container__descr__par">
+                Удаленное сопровождение процесса перепрограммирования для
+                <span class="prices--container__bonus__par__span">1-ой машины 50,00 €</span>
+              </p>
+
+              <p class="prices--container__descr__par">
+                Обучение и удаленное сопровождение процесса
+                перепрограммирования
+                <span class="prices--container__bonus__par__span">100 машины 1500,00 €</span>
+              </p>
+            </div>
+          </div>
+          <div class="prices--container__services">
+            <ul class="list prices--container__services__list">
+              <li class="prices--container__services__list__li">
+                <p class="prices--container__services__list__li__par">
+                  DEGR/AGR Disable
+                </p>
+                <p class="prices--container__services__list__li__par__price">
+                  20-30€
+                </p>
+              </li>
+              <li class="prices--container__services__list__li">
+                <p class="prices--container__services__list__li__par">
+                  EGR/AGR shutoff while driving
+                </p>
+                <p class="prices--container__services__list__li__par__price">
+                  30-40€
+                </p>
+              </li>
+              <li class="prices--container__services__list__li">
+                <p class="prices--container__services__list__li__par">
+                  DPF/FAP Disable
+                </p>
+                <p class="prices--container__services__list__li__par__price">
+                  20-30€
+                </p>
+              </li>
+              <li class="prices--container__services__list__li">
+                <p class="prices--container__services__list__li__par">
+                  DPF/FAP & EGR/AGR Disable
+                </p>
+                <p class="prices--container__services__list__li__par__price">
+                  20-30€
+                </p>
+              </li>
+              <li class="prices--container__services__list__li">
+                <p class="prices--container__services__list__li__par">
+                  DPF & EGR & AdBlue/SCR/UREA Disable
+                </p>
+                <p class="prices--container__services__list__li__par__price">
+                  50-70€
+                </p>
+              </li>
+              <li class="prices--container__services__list__li">
+                <p class="prices--container__services__list__li__par">
+                  AdBlue/SCR/UREA + Nox Sensors Disable
+                </p>
+                <p class="prices--container__services__list__li__par__price">
+                  20-40€
+                </p>
+              </li>
+              <li class="prices--container__services__list__li">
+                <p class="prices--container__services__list__li__par">
+                  TVA (Throttle valve) Removal
+                </p>
+                <p class="prices--container__services__list__li__par__price">
+                  20-30€
+                </p>
+              </li>
+              <li class="prices--container__services__list__li">
+                <p class="prices--container__services__list__li__par">
+                  Swirl Flaps (VSA) Delete
+                </p>
+                <p class="prices--container__services__list__li__par__price">
+                  20-30€
+                </p>
+              </li>
+              <li class="prices--container__services__list__li">
+                <p class="prices--container__services__list__li__par">
+                  Exhaust Flap off
+                </p>
+                <p class="prices--container__services__list__li__par__price">
+                  20-40€
+                </p>
+              </li>
+              <li class="prices--container__services__list__li">
+                <p class="prices--container__services__list__li__par">
+                  Oil pressure fix
+                  <span class="prices--container__services__list__li__par__span">(VAG 3.0TDI)</span>
+                </p>
+                <p class="prices--container__services__list__li__par__price">
+                  20-40€
+                </p>
+              </li>
+              <li class="prices--container__services__list__li">
+                <p class="prices--container__services__list__li__par">
+                  Idle level increase
+                </p>
+                <p class="prices--container__services__list__li__par__price">
+                  20-30€
+                </p>
+              </li>
+              <li class="prices--container__services__list__li">
+                <p class="prices--container__services__list__li__par">
+                  GPF/OPF OFF
+                </p>
+                <p class="prices--container__services__list__li__par__price">
+                  20-30€
+                </p>
+              </li>
+              <li class="prices--container__services__list__li">
+                <p class="prices--container__services__list__li__par">
+                  First Lambda/O2 Disable
+                </p>
+                <p class="prices--container__services__list__li__par__price">
+                  30-40€
+                </p>
+              </li>
+              <li class="prices--container__services__list__li">
+                <p class="prices--container__services__list__li__par">
+                  MAF off
+                </p>
+                <p class="prices--container__services__list__li__par__price">
+                  20-40€
+                </p>
+              </li>
+              <li class="prices--container__services__list__li">
+                <p class="prices--container__services__list__li__par">EVAP</p>
+                <p class="prices--container__services__list__li__par__price">
+                  20-40€
+                </p>
+              </li>
+              <li class="prices--container__services__list__li">
+                <p class="prices--container__services__list__li__par">
+                  Secondary Air Injection Pump
+                  <span class="prices--container__services__list__li__par__span">(SAP)</span>
+                </p>
+                <p class="prices--container__services__list__li__par__price">
+                  20-40€
+                </p>
+              </li>
+              <li class="prices--container__services__list__li">
+                <p class="prices--container__services__list__li__par">
+                  Specific DTC Disable
+                </p>
+                <p class="prices--container__services__list__li__par__price">
+                  10-20€
+                </p>
+              </li>
+              <li class="prices--container__services__list__li">
+                <p class="prices--container__services__list__li__par">
+                  Speed Limiter Disable
+                  <span class="prices--container__services__list__li__par__span">(Vmax)</span>
+                </p>
+                <p class="prices--container__services__list__li__par__price">
+                  10-40€
+                </p>
+              </li>
+              <li class="prices--container__services__list__li">
+                <p class="prices--container__services__list__li__par">
+                  RPM Limiter Increase
+                </p>
+                <p class="prices--container__services__list__li__par__price">
+                  20-40€
+                </p>
+              </li>
+              <li class="prices--container__services__list__li">
+                <p class="prices--container__services__list__li__par">
+                  Antilag
+                </p>
+                <p class="prices--container__services__list__li__par__price">
+                  100€
+                </p>
+              </li>
+              <li class="prices--container__services__list__li">
+                <p class="prices--container__services__list__li__par">
+                  Warranty Patch
+                </p>
+                <p class="prices--container__services__list__li__par__price">
+                  20-40€
+                </p>
+              </li>
+              <li class="prices--container__services__list__li">
+                <p class="prices--container__services__list__li__par">
+                  Sport Displays
+                  <span class="prices--container__services__list__li__par__span">(BMW)</span>
+                </p>
+                <p class="prices--container__services__list__li__par__price">
+                  20-40€
+                </p>
+              </li>
+              <li class="prices--container__services__list__li">
+                <p class="prices--container__services__list__li__par">
+                  Intake Manifold Flap Disable
+                </p>
+                <p class="prices--container__services__list__li__par__price">
+                  20€
+                </p>
+              </li>
+              <li class="prices--container__services__list__li">
+                <p class="prices--container__services__list__li__par">
+                  Torque monitoring off
+                </p>
+                <p class="prices--container__services__list__li__par__price">
+                  20€
+                </p>
+              </li>
+              <li class="prices--container__services__list__li">
+                <p class="prices--container__services__list__li__par">
+                  Hot Start
+                </p>
+                <p class="prices--container__services__list__li__par__price">
+                  20-40€
+                </p>
+              </li>
+              <li class="prices--container__services__list__li">
+                <p class="prices--container__services__list__li__par">
+                  Cold Start
+                </p>
+                <p class="prices--container__services__list__li__par__price">
+                  20-40€
+                </p>
+              </li>
+              <li class="prices--container__services__list__li">
+                <p class="prices--container__services__list__li__par">
+                  Cylinder On Demand OFF
+                  <span class="prices--container__services__list__li__par__span">(COD)</span>
+                </p>
+                <p class="prices--container__services__list__li__par__price">
+                  20-40€
+                </p>
+              </li>
+              <li class="prices--container__services__list__li">
+                <p class="prices--container__services__list__li__par">
+                  HARDCUT POPCORN LIMITER
+                </p>
+                <p class="prices--container__services__list__li__par__price">
+                  40€
+                </p>
+              </li>
+              <li class="prices--container__services__list__li">
+                <p class="prices--container__services__list__li__par">
+                  RPM Limiter Increase
+                </p>
+                <p class="prices--container__services__list__li__par__price">
+                  20-40€
+                </p>
+              </li>
+              <li class="prices--container__services__list__li">
+                <p class="prices--container__services__list__li__par">
+                  Burbles
+                </p>
+                <p class="prices--container__services__list__li__par__price">
+                  30-40€
+                </p>
+              </li>
+              <li class="prices--container__services__list__li">
+                <p class="prices--container__services__list__li__par">E85</p>
+                <p class="prices--container__services__list__li__par__price">
+                  70-90€
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="discovery">
+      <div class="container discovery--container">
+        <h2 class="title discovery--container__title">
+          Узнайте возможности вашей машины
+        </h2>
+        <p class="discovery--container__par">
+          Мы работаем со всеми марками авто начиная с 2000-го года выпуска -
+          легковыми и коммерческими. Доступно на всех типах двигателей:
+          атмо/турбо, бензин/дизель
+        </p>
+        <img class="discovery--container" src="./images/discovery/car_info.jpg" alt="" />
+      </div>
+    </section>
+    <section class="for-who">
+      <div class="container for-who--container">
+        <h3 class="title for-who--container__title">Для кого подходит ?</h3>
+        <ul class="list for-who--container__list">
+          <li class="for-who--container__list__li">
+            <img src="./images/for-who/whitebmw.jpg" alt="" class="for-who--container__list__li__img" />
+            <div class="for-who--container__list__li__descr">
+              <h4 class="for-who--container__list__li__descr__title">
+                Профессионалы
+              </h4>
+              <p class="for-who--container__list__li__descr__par for-who--container__list__li__descr__par__margin">
+                Мы готовы предоставить Вам высокопрофессиональный файловый
+                сервис и поддержку. 
+                <span class="for-who--container__list__li__descr__par__span">Готовность файлов 5-30 минут.</span>
+                Только безопасные и протестированные решения. 
+              </p>
+              <p class="for-who--container__list__li__descr__par">
+                Мы обучим вас процессу, поможем вам выбрать необходимое
+                оборудование и предоставим наш файловый сервис с
+                <span class="for-who--container__list__li__descr__par__span">полным сопровождением.</span>
+              </p>
+            </div>
+          </li>
+          <li class="for-who--container__list__li">
+            <img src="./images/for-who/blacklambo.jpg" alt="" class="for-who--container__list__li__img" />
+            <div class="for-who--container__list__li__descr">
+              <h4 class="for-who--container__list__li__descr__title">
+                Частный клиент
+              </h4>
+              <p class="for-who--container__list__li__descr__par">
+                Если вы частный клиент, то мы также поможем вам перепрошить
+                ваш автомобиль удаленно - для большинства машин цена
+                перепрограммирования составляет
+                <span class="for-who--container__list__li__descr__par__span-price">20-50€.</span>
+              </p>
+              <br />
+              <p
+                class="for-who--container__list__li__descr__par__span for-who--container__list__li__descr__par__span__margin">
+                Бонусы за пополнения счета.
+              </p>
+              <div class="for-who--container__list__li__descr__logo">
+                <img src="./images/for-who/for-who-logo.jpg" alt="" class="for-who--container__list__li__descr__logo" />
+              </div>
+            </div>
+          </li>
+          <li class="for-who--container__list__li">
+            <img src="./images/for-who/porscheback.jpg" alt="" class="for-who--container__list__li__img" />
+            <div class="for-who--container__list__li__descr">
+              <h4 class="for-who--container__list__li__descr__title">
+                Автосервис
+              </h4>
+              <p class="for-who--container__list__li__descr__par">
+                Если вы Автосервис и хотите добавить услугу
+                перепрограммирования машин (Stage 1/2 двигателя и АКПП,
+                отключение AdBlue, Nox, DPF, EGR, Catalyst) или начать этот
+                бизнес с нуля -
+                <span class="for-who--container__list__li__descr__par__span">мы обучим вас процессу</span>, поможем вам
+                выбрать необходимое оборудование и предоставим
+                наш файловый сервис с
+                <span class="for-who--container__list__li__descr__par__span">полным сопровождением.</span>
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="run-line">
+      <div class="run-line--container">
+        <img src="./images/run-line/dimsport.png" alt="" class="run-line--container__img dimsport" />
+        <img src="./images/run-line/cmd.png" alt="" class="run-line--container__img cmd" />
+        <img src="./images/run-line/alien.png" alt="" class="run-line--container__img alien" />
+        <img src="./images/run-line/magic.png" alt="" class="run-line--container__img magic" />
+        <img src="./images/run-line/autotuner.png" alt="" class="run-line--container__img autotuner" />
+      </div>
+  </main>
+
+<!-- Footer section -->
+
+  <footer class="footer">
+    <div class="container footer--container">
+      <div class="footer--container__links">
+        <a href="" class="link footer--container__links__link">
+          <img class="footer--container__links__link__img" src="./images/logos/black_logo.png" alt="" />
+        </a>
+        <a href="/" class="link footer--container__links__equip">
+          Оборудование
+        </a>
+      </div>
+      <div class="footer--container__socials">
+        <h5 class="footer--container__title">Социальные сети:</h5>
+        <ul class="list footer--container__socials__list">
+          <li class="footer--container__socials__list__li">
+            <a class="link footer--container__socials__list__li__link" href="/">Facebook</a>
+          </li>
+          <li class="footer--container__socials__list__li">
+            <a class="link footer--container__socials__list__li__link" href="/">Viber</a>
+          </li>
+          <li class="footer--container__socials__list__li">
+            <a class="link footer--container__socials__list__li__link" href="/">WhatsApp</a>
+          </li>
+          <li class="footer--container__socials__list__li">
+            <a class="link footer--container__socials__list__li__link" href="/">Telegram</a>
+          </li>
+          <li class="footer--container__socials__list__li">
+            <a class="link footer--container__socials__list__li__link" href="/">YouTube</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer--container__location">
+        <h5 class="footer--container__title">Местоположение:</h5>
+        <p class="footer--container__location__par">
+          StageX-Perfomance OÜ <br />
+          Technopolis Ruoholahti <br />
+          Helsinki, Finland
+        </p>
+      </div>
+      <address class="footer--container__contacts">
+        <h5 class="footer--container__title">Контакты:</h5>
+        <ul class="list footer--container__contacts__list">
+          <li class="footer--container__contacts__list__li">
+            <a href="tel:+358-40-3621988" class="link footer--container__contacts__list__li__link">
+              +358-40-3621988
+            </a>
+          </li>
+          <li class="footer--container__contacts__list__li">
+            <a href="mailto:support@stagex-performance.eu" class="link footer--container__contacts__list__li__link">
+              support@stagex-performance.eu
+            </a>
+          </li>
+        </ul>
+      </address>
+      <div class="footer--container__work-time">
+        <h5 class="footer--container__title">Время работы:</h5>
+        <ul class="list footer--container__work-time__list">
+          <li class="footer--container__work-time__list__li">Пн-Вс</li>
+          <li class="footer--container__work-time__list__li">8:00-23:00</li>
+        </ul>
+      </div>
+      <div class="footer--container__copyright">
+        <div class="footer--container__copyright__wrapper">
+          <h5 class="footer--container__title">
+            Разработано компанией
+            <svg class="icon footer--container__title__icon">
+              <use href="./images/icons.svg#mkey"></use>
+            </svg>
+          </h5>
+        </div>
+        <p class="footer--container__copyright__par">
+          Copyright © 2024 STAGEX, Inc.
+        </p>
+        <ul class="list footer--container__copyright__list">
+          <li class="footer--container__copyright__list__li">
+            <svg class="icon footer--container__copyright__list__li__icon-visa">
+              <use href="./images/icons.svg#visa"></use>
+            </svg>
+          </li>
+          <li class="footer--container__copyright__list__li">
+            <svg class="icon footer--container__copyright__list__li__icon-mc">
+              <use href="./images/icons.svg#mastercard"></use>
+            </svg>
+          </li>
+          <li class="footer--container__copyright__list__li">
+            <svg class="icon footer--container__copyright__list__li__icon-stripe">
+              <use href="./images/icons.svg#stripe"></use>
+            </svg>
+          </li>
+          <li class="footer--container__copyright__list__li">
+            <svg class="icon footer--container__copyright__list__li__icon-paypal">
+              <use href="./images/icons.svg#paypal"></use>
+            </svg>
+          </li>
+          <li class="footer--container__copyright__list__li">
+            <svg class="icon footer--container__copyright__list__li__icon-btc" fill="red">
+              <use href="./images/icons.svg#bitcoin"></use>
+            </svg>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
